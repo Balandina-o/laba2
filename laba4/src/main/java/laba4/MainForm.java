@@ -3,7 +3,7 @@ package laba4;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
-import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+import javax.swing.*; // Р‘РёР±Р»РёРѕС‚РµРєР° РґР»СЏ GUI (РїРѕСЃС‚СЂРѕРµРЅР° РЅР° РѕСЃРЅРѕРІРµ awt)
 
 public class MainForm {
 	private JPanel  main_panel;
@@ -27,39 +27,39 @@ public class MainForm {
     int value=1;
 	public MainForm () {
 	
-		main_GUI = new JFrame("subversion");	// создание графического окна
-		main_GUI.setTitle ("Using subversion for developers"); // установка заголовка
-        main_GUI.setBounds(700,100,700,700); // установка размеров
-		main_GUI.setResizable(false); // фиксированный размер окна
+		main_GUI = new JFrame("subversion");	// СЃРѕР·РґР°РЅРёРµ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РѕРєРЅР°
+		main_GUI.setTitle ("Using subversion for developers"); // СѓСЃС‚Р°РЅРѕРІРєР° Р·Р°РіРѕР»РѕРІРєР°
+        main_GUI.setBounds(700,100,700,700); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+		main_GUI.setResizable(false); // С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РјРµСЂ РѕРєРЅР°
 	
-		main_panel = new JPanel(); // Панель - используется для организации компонентов в окне
-		main_panel.setLayout(null); // параметр установки расположения по setBounds
-		main_GUI.add(main_panel); // Добавление на фрейм панели
+		main_panel = new JPanel(); // РџР°РЅРµР»СЊ - РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕСЂРіР°РЅРёР·Р°С†РёРё РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РІ РѕРєРЅРµ
+		main_panel.setLayout(null); // РїР°СЂР°РјРµС‚СЂ СѓСЃС‚Р°РЅРѕРІРєРё СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РїРѕ setBounds
+		main_GUI.add(main_panel); // Р”РѕР±Р°РІР»РµРЅРёРµ РЅР° С„СЂРµР№Рј РїР°РЅРµР»Рё
 	
-		JLabel laba_info = new JLabel("Лабораторная работа №5"); // Отображение текста или изображения
-		laba_info.setBounds(175,0,150,30); // установка размеров
-		main_panel.add(laba_info);  // добавление на панель метки
+		JLabel laba_info = new JLabel("Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–5"); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
+		laba_info.setBounds(175,0,150,30); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+		main_panel.add(laba_info);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
 	
         field = new JFormattedTextField();
         field.setBounds(130,300,120,40);
-        JLabel label1 = new JLabel("Введите сторону:  "); // Отображение текста или изображения
-        label1.setBounds(20,300,150,40); // установка размеров
-        main_panel.add(label1);  // добавление на панель метки
+        JLabel label1 = new JLabel("Р’РІРµРґРёС‚Рµ СЃС‚РѕСЂРѕРЅСѓ:  "); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
+        label1.setBounds(20,300,150,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+        main_panel.add(label1);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
 
         
-		JLabel perinf = new JLabel("Периметр: ");
+		JLabel perinf = new JLabel("РџРµСЂРёРјРµС‚СЂ: ");
         perinf.setBounds(100,400,150,40);
         main_panel.add(perinf);
        
-        JLabel info5 = new JLabel("Площадь:");
+        JLabel info5 = new JLabel("РџР»РѕС‰Р°РґСЊ:");
         info5.setBounds(200,400,150,40);
         main_panel.add(info5);
         
-        JLabel info6 = new JLabel("Сторона:");
+        JLabel info6 = new JLabel("РЎС‚РѕСЂРѕРЅР°:");
         info6.setBounds(400,400,150,40);
         main_panel.add(info6);
         
-        JLabel info7 = new JLabel("Фигура: ");
+        JLabel info7 = new JLabel("Р¤РёРіСѓСЂР°: ");
         info7.setBounds(300,400,150,40);
         main_panel.add(info7);
         
@@ -81,12 +81,12 @@ public class MainForm {
         main_panel.add(infoStoron);
         
         
-        JRadioButton jRadioButton = new JRadioButton("треугольник");
+        JRadioButton jRadioButton = new JRadioButton("С‚СЂРµСѓРіРѕР»СЊРЅРёРє");
 
-        ActionListener actionListener10 = new jem(this); //создаем слушатель
-        jRadioButton.addActionListener(actionListener10); // добавляем слушатель к кнопке
+        ActionListener actionListener10 = new jem(this); //СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+        jRadioButton.addActionListener(actionListener10); // РґРѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЊ Рє РєРЅРѕРїРєРµ
 
-        JRadioButton jRadioButton1 = new JRadioButton("квадрат");
+        JRadioButton jRadioButton1 = new JRadioButton("РєРІР°РґСЂР°С‚");
         ActionListener actionListener11 = new jem1(this);
         jRadioButton1.addActionListener(actionListener11);
 
@@ -101,32 +101,32 @@ public class MainForm {
         
         
         
-        JLabel labelNotSortInfo = new JLabel("Несортированный массив:");
-        labelNotSortInfo.setBounds(40,500,170,60); // установка размеров
-        main_panel.add(labelNotSortInfo);  // добавление на панель метки
+        JLabel labelNotSortInfo = new JLabel("РќРµСЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:");
+        labelNotSortInfo.setBounds(40,500,170,60); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+        main_panel.add(labelNotSortInfo);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
 
-        JLabel labelSortInfo = new JLabel("Отсортированный массив:");
-        labelSortInfo.setBounds(290,500,170,60); // установка размеров
-        main_panel.add(labelSortInfo);  // добавление на панель метки
+        JLabel labelSortInfo = new JLabel("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:");
+        labelSortInfo.setBounds(290,500,170,60); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+        main_panel.add(labelSortInfo);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
 
         labelNotSort = new JLabel("NotSortArray~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        labelNotSort.setBounds(40,550,170,60); // установка размеров
+        labelNotSort.setBounds(40,550,170,60); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
 
         generateMass1= new generateMass();
         y = generateMass1.generate();
         labelNotSort.setText(Arrays.toString(y));
-        main_panel.add(labelNotSort);  // добавление на панель метки
+        main_panel.add(labelNotSort);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
 
         labelSort = new JLabel("SortArray~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        labelSort.setBounds(290,550,170,60); // установка размеров
-        main_panel.add(labelSort);  // добавление на панель метки
+        labelSort.setBounds(290,550,170,60); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+        main_panel.add(labelSort);  // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РјРµС‚РєРё
         
         int namber=2;
-        JRadioButton jRadioButton2 = new JRadioButton("Пузырьковая сортировка");
+        JRadioButton jRadioButton2 = new JRadioButton("РџСѓР·С‹СЂСЊРєРѕРІР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°");
         jRadioButton2.addActionListener(e -> setValue(namber));
 
         int namber1=1;
-        JRadioButton jRadioButton3 = new JRadioButton("Сортировка слиянием");
+        JRadioButton jRadioButton3 = new JRadioButton("РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј");
         jRadioButton3.addActionListener(e -> setValue(namber1));
         
         ButtonGroup buttonGroup1 = new ButtonGroup();
@@ -137,65 +137,65 @@ public class MainForm {
         jRadioButton1.setSelected(true);
         main_panel.add(jRadioButton2);
         main_panel.add(jRadioButton3);
-		JButton button_exit = new JButton("Выход"); // добавляем кнопку
-		button_exit.setBounds(190,150,120,40); // установка размеров
-		ActionListener actionListener = new ListenerButton(); //создаем слушатель
-		button_exit.addActionListener(actionListener); // добавляем слушатель к кнопке
-		main_panel.add(button_exit); // добавление на панель кнопки
+		JButton button_exit = new JButton("Р’С‹С…РѕРґ"); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ
+		button_exit.setBounds(190,150,120,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+		ActionListener actionListener = new ListenerButton(); //СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+		button_exit.addActionListener(actionListener); // РґРѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЊ Рє РєРЅРѕРїРєРµ
+		main_panel.add(button_exit); // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РєРЅРѕРїРєРё
 	
-		JButton button1 = new JButton("Информация"); // создание кнопки
-		button1.setBounds(190,90,120,40); // установка размеров
+		JButton button1 = new JButton("РРЅС„РѕСЂРјР°С†РёСЏ"); // СЃРѕР·РґР°РЅРёРµ РєРЅРѕРїРєРё
+		button1.setBounds(190,90,120,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
 		
 		
 		infoform = new InfoForm();
-		ActionListener actionListener1 = new Jbutton(infoform); // создаем слушатель
-		button1.addActionListener(actionListener1); // добавление к кнопке слушателя
-		main_panel.add(button1); // добавление на панель кнопки
+		ActionListener actionListener1 = new Jbutton(infoform); // СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+		button1.addActionListener(actionListener1); // РґРѕР±Р°РІР»РµРЅРёРµ Рє РєРЅРѕРїРєРµ СЃР»СѓС€Р°С‚РµР»СЏ
+		main_panel.add(button1); // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РєРЅРѕРїРєРё
 		
-        JButton button3 = new JButton("Посчитать"); // добавляем кнопку
-        button3.setBounds(190,360,120,40); // установка размеров
+        JButton button3 = new JButton("РџРѕСЃС‡РёС‚Р°С‚СЊ"); // РґРѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ
+        button3.setBounds(190,360,120,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
         ActionListener actionListener5 = new  CalcButton(field,this,
-                infoPerimeter,infoArea,infoStoron,infoNameFigur); //создаем слушатель
-        button3.addActionListener(actionListener5); // добавляем слушатель к кнопке
-        main_panel.add(button3); // добавление на панель кнопки
+                infoPerimeter,infoArea,infoStoron,infoNameFigur); //СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+        button3.addActionListener(actionListener5); // РґРѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЊ Рє РєРЅРѕРїРєРµ
+        main_panel.add(button3); // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° РїР°РЅРµР»СЊ РєРЅРѕРїРєРё
 	
-		JMenuBar menuBar = new JMenuBar(); // создаем меню бар
-		JMenu menu1 = new JMenu("Меню 1"); // создаем меню
-		JMenuItem OpenUSATU = new JMenuItem("Отобразить логотип УГАТУ"); // добавляем в меню пункты
-		JMenuItem OpenUSATU1 = new JMenuItem("Загрузить файл в проект 2"); // добавляем в меню пункты
-		JMenuItem ExitMenu = new JMenuItem("Выход"); // добавляем в меню пункты
+		JMenuBar menuBar = new JMenuBar(); // СЃРѕР·РґР°РµРј РјРµРЅСЋ Р±Р°СЂ
+		JMenu menu1 = new JMenu("РњРµРЅСЋ 1"); // СЃРѕР·РґР°РµРј РјРµРЅСЋ
+		JMenuItem OpenUSATU = new JMenuItem("РћС‚РѕР±СЂР°Р·РёС‚СЊ Р»РѕРіРѕС‚РёРї РЈР“РђРўРЈ"); // РґРѕР±Р°РІР»СЏРµРј РІ РјРµРЅСЋ РїСѓРЅРєС‚С‹
+		JMenuItem OpenUSATU1 = new JMenuItem("Р—Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р» РІ РїСЂРѕРµРєС‚ 2"); // РґРѕР±Р°РІР»СЏРµРј РІ РјРµРЅСЋ РїСѓРЅРєС‚С‹
+		JMenuItem ExitMenu = new JMenuItem("Р’С‹С…РѕРґ"); // РґРѕР±Р°РІР»СЏРµРј РІ РјРµРЅСЋ РїСѓРЅРєС‚С‹
 		ExitMenu.addActionListener(actionListener);
 		
         image = new Image();
-		comboBox = new JComboBox<>(); // создаем выпадающий список
-		comboBox.addItem("Переместить логотип УГАТУ в верхний правый угол"); // создаем элемент в списке
-		comboBox.addItem("Переместить логотип УГАТУ в середину"); // создаем элемент в списке
-		comboBox.addItem("Переместить логотип УГАТУ в левый верхний угол"); // создаем элемент в списке
-		comboBox.addItem("Отсортировать данные в прооекте2 "); // создаем элемент в списке
-		comboBox.setBounds(100,210,310,40); // установка размеров
+		comboBox = new JComboBox<>(); // СЃРѕР·РґР°РµРј РІС‹РїР°РґР°СЋС‰РёР№ СЃРїРёСЃРѕРє
+		comboBox.addItem("РџРµСЂРµРјРµСЃС‚РёС‚СЊ Р»РѕРіРѕС‚РёРї РЈР“РђРўРЈ РІ РІРµСЂС…РЅРёР№ РїСЂР°РІС‹Р№ СѓРіРѕР»"); // СЃРѕР·РґР°РµРј СЌР»РµРјРµРЅС‚ РІ СЃРїРёСЃРєРµ
+		comboBox.addItem("РџРµСЂРµРјРµСЃС‚РёС‚СЊ Р»РѕРіРѕС‚РёРї РЈР“РђРўРЈ РІ СЃРµСЂРµРґРёРЅСѓ"); // СЃРѕР·РґР°РµРј СЌР»РµРјРµРЅС‚ РІ СЃРїРёСЃРєРµ
+		comboBox.addItem("РџРµСЂРµРјРµСЃС‚РёС‚СЊ Р»РѕРіРѕС‚РёРї РЈР“РђРўРЈ РІ Р»РµРІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»"); // СЃРѕР·РґР°РµРј СЌР»РµРјРµРЅС‚ РІ СЃРїРёСЃРєРµ
+		comboBox.addItem("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РґР°РЅРЅС‹Рµ РІ РїСЂРѕРѕРµРєС‚Рµ2 "); // СЃРѕР·РґР°РµРј СЌР»РµРјРµРЅС‚ РІ СЃРїРёСЃРєРµ
+		comboBox.setBounds(100,210,310,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
 		
-		label = new JLabel(); // создаем метку
-		label.setBounds(390,0,100,100); // установка размеров метки
+		label = new JLabel(); // СЃРѕР·РґР°РµРј РјРµС‚РєСѓ
+		label.setBounds(390,0,100,100); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ РјРµС‚РєРё
 	
-		ActionListener actionListener3 = new Jmenu2(this); // создаем слушатель
-		OpenUSATU.addActionListener(actionListener3); //добавляем к кнопке слушателя
+		ActionListener actionListener3 = new Jmenu2(this); // СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+		OpenUSATU.addActionListener(actionListener3); //РґРѕР±Р°РІР»СЏРµРј Рє РєРЅРѕРїРєРµ СЃР»СѓС€Р°С‚РµР»СЏ
 		
 		
 		ActionListener actionListener6 = new ButtonInput(infoform.getFio());
 	    OpenUSATU1.addActionListener(actionListener6);
 		
-		ActionListener actionListener4 = new ComboBox1(this,comboBox); //создаем слушатесь
-		comboBox.addActionListener(actionListener4); // добавляем слушателя к выпадающему списку
+		ActionListener actionListener4 = new ComboBox1(this,comboBox); //СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµСЃСЊ
+		comboBox.addActionListener(actionListener4); // РґРѕР±Р°РІР»СЏРµРј СЃР»СѓС€Р°С‚РµР»СЏ Рє РІС‹РїР°РґР°СЋС‰РµРјСѓ СЃРїРёСЃРєСѓ
 		
         main_panel.add(field);
-		main_panel.add(comboBox); // добавляем к панели выпадающее меню
-		menu1.add(OpenUSATU);   // Добавление в меню кнопки
+		main_panel.add(comboBox); // РґРѕР±Р°РІР»СЏРµРј Рє РїР°РЅРµР»Рё РІС‹РїР°РґР°СЋС‰РµРµ РјРµРЅСЋ
+		menu1.add(OpenUSATU);   // Р”РѕР±Р°РІР»РµРЅРёРµ РІ РјРµРЅСЋ РєРЅРѕРїРєРё
 		menu1.add(OpenUSATU1);
-		menu1.add(ExitMenu);	// Добавление в меню кнопки
-		menuBar.add(menu1);		// Добавление в меню бар кнопку
-		main_GUI.setJMenuBar(menuBar); // добавляем на фрейм меню бар
+		menu1.add(ExitMenu);	// Р”РѕР±Р°РІР»РµРЅРёРµ РІ РјРµРЅСЋ РєРЅРѕРїРєРё
+		menuBar.add(menu1);		// Р”РѕР±Р°РІР»РµРЅРёРµ РІ РјРµРЅСЋ Р±Р°СЂ РєРЅРѕРїРєСѓ
+		main_GUI.setJMenuBar(menuBar); // РґРѕР±Р°РІР»СЏРµРј РЅР° С„СЂРµР№Рј РјРµРЅСЋ Р±Р°СЂ
 		
-		main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна JFrame и процесса Java
+		main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР° JFrame Рё РїСЂРѕС†РµСЃСЃР° Java
 	
 	
 	}
@@ -211,21 +211,21 @@ public class MainForm {
     }
     public void moveLogo(Integer directionIndex) {
         int height = 100,width=100;
-        if(directionIndex == 0) { // меняем расположение картинки по выбранному пункту
+        if(directionIndex == 0) { // РјРµРЅСЏРµРј СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєР°СЂС‚РёРЅРєРё РїРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ РїСѓРЅРєС‚Сѓ
             image.setSize(width,height);
             image.setLocation(390,0);
             image.repaint();
 
-        }else if (directionIndex == 1) { // меняем расположение картинки по выбранному пункту
+        }else if (directionIndex == 1) { // РјРµРЅСЏРµРј СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєР°СЂС‚РёРЅРєРё РїРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ РїСѓРЅРєС‚Сѓ
             image.setSize(width,height);
             image.setLocation(202,0);
             image.repaint();
-        }else if (directionIndex == 2) { // меняем расположение картинки по выбранному пункту
+        }else if (directionIndex == 2) { // РјРµРЅСЏРµРј СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєР°СЂС‚РёРЅРєРё РїРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ РїСѓРЅРєС‚Сѓ
 
             image.setSize(width,height);
             image.setLocation(2,0);
             image.repaint();
-        }else if (directionIndex == 3) { // меняем расположение картинки по выбранному пункту
+        }else if (directionIndex == 3) { // РјРµРЅСЏРµРј СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєР°СЂС‚РёРЅРєРё РїРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ РїСѓРЅРєС‚Сѓ
             if(value==1) {
                 QuickSort sort = new QuickSort(y);
                 moveSortArray(sort);

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.FileReader;
 import java.io.IOException;
 
-import javax.swing.*; // Библиотека для GUI (построена на основе awt)
+import javax.swing.*; // Р‘РёР±Р»РёРѕС‚РµРєР° РґР»СЏ GUI (РїРѕСЃС‚СЂРѕРµРЅР° РЅР° РѕСЃРЅРѕРІРµ awt)
 
 public class InfoForm {
 	private JFrame frame;
@@ -15,15 +15,15 @@ public class InfoForm {
 	private JScrollPane scrollPane;
 	
 	public InfoForm () {
-		frame = new JFrame("ФИО");
+		frame = new JFrame("Р¤РРћ");
 		frame.setBounds(500,400,400,300);
-		frame.setResizable(false); // фиксированный размер окна
+		frame.setResizable(false); // С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РјРµСЂ РѕРєРЅР°
 
 		JPanel panel1 = new JPanel();
 		frame.setLayout(null);
 		frame.add(panel1);
 
-		fio = new JLabel("ФИО участников:"); // Отображение текста или изображения
+		fio = new JLabel("Р¤РРћ СѓС‡Р°СЃС‚РЅРёРєРѕРІ:"); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
 		fio.setBounds(20,0,150,30);
 		frame.add(fio);
 
@@ -35,22 +35,22 @@ public class InfoForm {
 		scrollPane.setBorder(BorderFactory.createEmptyBorder());
 		frame.add(scrollPane);
 
-		zka = new JLabel("Номер зачетной книжки:"); // Отображение текста или изображения
+		zka = new JLabel("РќРѕРјРµСЂ Р·Р°С‡РµС‚РЅРѕР№ РєРЅРёР¶РєРё:"); // РћС‚РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСЃС‚Р° РёР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
 		zka.setBounds(150,0,150,30);
 		frame.add(zka);
 
 		
-		JButton button3 = new JButton("Назад"); // создание кнопки
-		button3.setBounds(190,170,120,40); // установка размеров
-		ActionListener actionListener3 = new Listenerback(frame); // создаем слушатель
-		button3.addActionListener(actionListener3); // добавление к кнопке слушателя
-		frame.add(button3); // добавление на рамку кнопки
+		JButton button3 = new JButton("РќР°Р·Р°Рґ"); // СЃРѕР·РґР°РЅРёРµ РєРЅРѕРїРєРё
+		button3.setBounds(190,170,120,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+		ActionListener actionListener3 = new Listenerback(frame); // СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+		button3.addActionListener(actionListener3); // РґРѕР±Р°РІР»РµРЅРёРµ Рє РєРЅРѕРїРєРµ СЃР»СѓС€Р°С‚РµР»СЏ
+		frame.add(button3); // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° СЂР°РјРєСѓ РєРЅРѕРїРєРё
 
-		JButton button4 = new JButton("Проводник"); // создание кнопки
-		button4.setBounds(50,170,120,40); // установка размеров
-		ActionListener actionListener4 = new FileChooser(this); // создаем слушатель
-		button4.addActionListener(actionListener4); // добавление к кнопке слушателя
-		frame.add(button4); // добавление на рамку кнопки
+		JButton button4 = new JButton("РџСЂРѕРІРѕРґРЅРёРє"); // СЃРѕР·РґР°РЅРёРµ РєРЅРѕРїРєРё
+		button4.setBounds(50,170,120,40); // СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ
+		ActionListener actionListener4 = new FileChooser(this); // СЃРѕР·РґР°РµРј СЃР»СѓС€Р°С‚РµР»СЊ
+		button4.addActionListener(actionListener4); // РґРѕР±Р°РІР»РµРЅРёРµ Рє РєРЅРѕРїРєРµ СЃР»СѓС€Р°С‚РµР»СЏ
+		frame.add(button4); // РґРѕР±Р°РІР»РµРЅРёРµ РЅР° СЂР°РјРєСѓ РєРЅРѕРїРєРё
 	}
 
 	public void show () {
@@ -58,11 +58,11 @@ public class InfoForm {
 	}
 	public void ren() {
 		zka.setText("");
-		fio.setText("Содержимое файла:");
+		fio.setText("РЎРѕРґРµСЂР¶РёРјРѕРµ С„Р°Р№Р»Р°:");
 	}
 	public void ner() {
-		zka.setText("Номер зачетной книжки:");
-		fio.setText("ФИО участников:");
+		zka.setText("РќРѕРјРµСЂ Р·Р°С‡РµС‚РЅРѕР№ РєРЅРёР¶РєРё:");
+		fio.setText("Р¤РРћ СѓС‡Р°СЃС‚РЅРёРєРѕРІ:");
 	}
 	
 	public JTextArea getFio() {
@@ -74,7 +74,7 @@ public class InfoForm {
 		JButton open = new JButton();
 		JFileChooser fc = new JFileChooser();
 		fc.setCurrentDirectory(new java.io.File("D:"));
-		fc.setDialogTitle("Проводник");
+		fc.setDialogTitle("РџСЂРѕРІРѕРґРЅРёРє");
 		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
 		
@@ -92,7 +92,7 @@ public class InfoForm {
 					fio1.setText(ss);
 					
 				}else {
-					 JOptionPane.showMessageDialog(null, "Выбранный файл должен иметь расширение .txt", "Ошибка", JOptionPane.WARNING_MESSAGE);
+					 JOptionPane.showMessageDialog(null, "Р’С‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р» РґРѕР»Р¶РµРЅ РёРјРµС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ .txt", "РћС€РёР±РєР°", JOptionPane.WARNING_MESSAGE);
 				}}catch(IOException ex){}
 		}
 	}
