@@ -18,4 +18,5 @@ public class Tri extends Figure {
         area=Math.round(area * 1000.0) / 1000.0;
         return area;
     }
+    //testing
 }
