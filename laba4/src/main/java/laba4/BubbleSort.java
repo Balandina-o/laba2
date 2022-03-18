@@ -1,5 +1,5 @@
 package laba4;
-//123
+
 import javax.swing.*;
 import java.util.Arrays;
 
